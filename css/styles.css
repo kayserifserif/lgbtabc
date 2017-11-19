@@ -1,12 +1,11 @@
-/*
-RED		#D93B3C
-ORANGE	#F2632F
-YELLOW	#FDCB42
-GREEN	#B6BE33
-BLUE	#46A5D6
-PURPLE	#9E69D9
- */
-
+/****
+RED		#e34d4f
+ORANGE	#ff7e59
+YELLOW	#deb41a
+GREEN	#2bac67
+BLUE	#229ec1
+PURPLE	#674c7b
+****/
 
 /****
 BASICS
@@ -23,7 +22,6 @@ html, body {
 }
 
 body {
-	/* color: #9e69d9; */
 	color: #444;
 	font-family: "Domine", "Didot", "Bodoni", serif;
 	line-height: 1.5;
@@ -41,7 +39,7 @@ header {
 	margin: auto;
 	width: 100%;
 	padding: 1rem 1rem 1.5rem 1rem;
-	background-color: #CC7283;
+	background-image: linear-gradient(-120deg, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
 	color: #fff;
 	text-align: center;
 }
@@ -90,7 +88,7 @@ TERMS
 #list {
 	position: relative;
 	width: 90%;
-	margin: 0 auto 1rem;
+	margin: 0 auto 2rem;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -139,24 +137,14 @@ TERMS
 	.term dt {
 		position: absolute;
 		margin-top: -0.03rem;
-		/* height: 3em; */
 		font-family: "Nunito", "Gotham", "Avenir", "Futura", sans-serif;
 		font-size: 1.1rem;
 		text-transform: uppercase;
 		letter-spacing: 1.7px;
-		/* border-top-left-radius: 5px; */
-		/* border-top-right-radius: 5px; */
 		z-index: 1;
 	}
 
 	.term dd {
-		/* height: 8.5em; */
-		/* margin: 0; */
-		/* border-bottom-left-radius: 5px; */
-		/* border-bottom-right-radius: 5px; */
-		/* transform: translateY(0) rotateX(-90deg); */
-		/* opacity: 0; */
-		/* transition: 0.5s transform, 0.2s opacity; */
 		transform: rotateY(-180deg);
 	}
 
@@ -165,7 +153,5 @@ TERMS
 	}
 
 	.term:hover dd {
-		/* transform: translateY(1.5em) rotateX(0deg); */
-		/* opacity: 1; */
 		transform: rotateY(0);
 	}
