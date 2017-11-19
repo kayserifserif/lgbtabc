@@ -102,22 +102,22 @@ TERMS
 
 	dt .romantic,
 	.romantic dt,
-	.romantic dd { background-color: #E34D4F; }
+	.romantic dd { background-color: #e34d4f; }
 	dt .gender,
 	.gender dt,
-	.gender dd { background-color: #E68569; }
+	.gender dd { background-color: #ff7e59; }
 	dt .community,
 	.community dt,
-	.community dd { background-color: /*#FBD838*/ #3D745F; }
+	.community dd { background-color: #deb41a }
 	dt .biology,
 	.biology dt,
-	.biology dd { background-color: #2BAC67; }
+	.biology dd { background-color: #2bac67; }
 	dt .expression,
 	.expression dt,
-	.expression dd { background-color: #27AACF; }
+	.expression dd { background-color: #229ec1; }
 	dt .sexual,
 	.sexual dt,
-	.sexual dd { background-color: #674C7B; }
+	.sexual dd { background-color: #674c7b; }
 
 	.term dt,
 	.term dd {
