@@ -85,6 +85,7 @@ TERMS
 ****/
 
 #list {
+	position: relative;
 	width: 90%;
 	margin: auto;
 	display: flex;
@@ -92,53 +93,81 @@ TERMS
 	justify-content: center;
 }
 
-	.term {
+	#list > div {
+		perspective: 600px;
+	}
+
+	.term dt,
+	.term dd {
 		width: 13em;
-		height: 12em;
+		height: 10em;
 		margin: 1em;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 	}
 
-	.romantic { background-color: #F15B49; }
-	.gender { background-color: #FC9F32; }
-	.community { background-color: #FBD838; }
-	.biology { background-color: #64A255; }
-	.expression { background-color: #5997B8; }
-	.sexual { background-color: #AF4E4B; }
+	dt .romantic,
+	.romantic dt,
+	.romantic dd { background-color: #F15B49; }
+	dt .gender,
+	.gender dt,
+	.gender dd { background-color: #FC9F32; }
+	dt .community,
+	.community dt,
+	.community dd { background-color: /*#FBD838*/ #BA9F40; }
+	dt .biology,
+	.biology dt,
+	.biology dd { background-color: #64A255; }
+	dt .expression,
+	.expression dt,
+	.expression dd { background-color: #5997B8; }
+	dt .sexual,
+	.sexual dt,
+	.sexual dd { background-color: #AF4E4B; }
 
-	#list dt,
-	#list dd {
-		width: 100%;
+	.term dt,
+	.term dd {
+		/* width: 100%; */
 		padding: 1em;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		text-align: center;
 		color: #fff;
+		border-radius: 5px;
+		transition: transform 1s;
+		transform-style: preserve-3d;
+		backface-visibility: hidden;
 	}
 
-	#list dt {
-		height: 3em;
-		padding-bottom: 0.5em;
+	.term dt {
+		position: absolute;
+		margin-top: -0.03em;
+		/* height: 3em; */
 		font-family: "Montserrat", "Gotham", "Avenir", "Futura", sans-serif;
-		border-top-left-radius: 5px;
-		border-top-right-radius: 5px;
+		/* border-top-left-radius: 5px; */
+		/* border-top-right-radius: 5px; */
+		z-index: 1;
 	}
 
-	#list dd {
-		height: 8.5em;
-		padding-top: 0.5em;
-		margin: 0;
-		border-bottom-left-radius: 5px;
-		border-bottom-right-radius: 5px;
+	.term dd {
+		/* height: 8.5em; */
+		/* margin: 0; */
+		/* border-bottom-left-radius: 5px; */
+		/* border-bottom-right-radius: 5px; */
 		/* transform: translateY(0) rotateX(-90deg); */
 		/* opacity: 0; */
-		transition: 0.5s transform, 0.2s opacity;
+		/* transition: 0.5s transform, 0.2s opacity; */
+		transform: rotateY(-180deg);
+	}
+
+	.term:hover dt {
+		transform: rotateY(180deg);
 	}
 
 	.term:hover dd {
 		/* transform: translateY(1.5em) rotateX(0deg); */
 		/* opacity: 1; */
+		transform: rotateY(0);
 	}
