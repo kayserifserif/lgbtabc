@@ -66,6 +66,9 @@ LEGEND
 	#legend > div {
 		display: flex;
 		align-items: center;
+	}
+
+	#legend > div:not(last-of-type) {
 		margin-right: 1em;
 	}
 
