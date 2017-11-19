@@ -1,6 +1,6 @@
 // GENERATE TERMS
 //
-// d3.csv("../terms.csv", function(data) {
+// d3.csv("/data/terms.csv", function(data) {
 //
 //   var columns = ["Category", "Term", "Definition"];
 //
