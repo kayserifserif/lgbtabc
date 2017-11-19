@@ -41,7 +41,7 @@ header {
 	margin: auto;
 	width: 100%;
 	padding: 1em 1em 1.5em 1em;
-	background-color: #795d8e;
+	background-color: #CC7283;
 	color: #fff;
 	text-align: center;
 }
@@ -109,22 +109,22 @@ TERMS
 
 	dt .romantic,
 	.romantic dt,
-	.romantic dd { background-color: #F15B49; }
+	.romantic dd { background-color: #E34D4F; }
 	dt .gender,
 	.gender dt,
-	.gender dd { background-color: #FC9F32; }
+	.gender dd { background-color: #E68569; }
 	dt .community,
 	.community dt,
-	.community dd { background-color: /*#FBD838*/ #BA9F40; }
+	.community dd { background-color: /*#FBD838*/ #3D745F; }
 	dt .biology,
 	.biology dt,
-	.biology dd { background-color: #64A255; }
+	.biology dd { background-color: #2BAC67; }
 	dt .expression,
 	.expression dt,
-	.expression dd { background-color: #5997B8; }
+	.expression dd { background-color: #27AACF; }
 	dt .sexual,
 	.sexual dt,
-	.sexual dd { background-color: #AF4E4B; }
+	.sexual dd { background-color: #674C7B; }
 
 	.term dt,
 	.term dd {
