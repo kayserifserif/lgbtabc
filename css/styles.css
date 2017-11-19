@@ -49,6 +49,19 @@ header {
 		text-align: center;
 	}
 
+	header a,
+	footer a {
+		color: #fff;
+		text-decoration: none;
+		border-bottom: 1px solid currentColor;
+		transition: color 0.1s, border-bottom 0.1s;
+	}
+
+	header a:hover,
+	footer a:hover {
+		color: #FEF3F4;
+	}
+
 /****
 LEGEND
 ****/
