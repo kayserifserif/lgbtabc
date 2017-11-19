@@ -25,12 +25,12 @@ html, body {
 body {
 	/* color: #9e69d9; */
 	color: #444;
-	font-family: "Playfair Display", "Didot", "Bodoni", serif;
-	font-size: 1.5em;
+	font-family: "Domine", "Didot", "Bodoni", serif;
+	line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Montserrat", "Gotham", "Avenir", "Futura", sans-serif;
+	font-family: "Nunito", "Gotham", "Avenir", "Futura", sans-serif;
 }
 
 /****
@@ -40,14 +40,14 @@ HEADER
 header {
 	margin: auto;
 	width: 100%;
-	padding: 1em 1em 1.5em 1em;
+	padding: 1rem 1rem 1.5rem 1rem;
 	background-color: #CC7283;
 	color: #fff;
 	text-align: center;
 }
 
 	#title {
-		font-size: 2em;
+		font-size: 3em;
 		text-align: center;
 	}
 
@@ -57,7 +57,7 @@ LEGEND
 
 #legend {
 	width: 95%;
-	margin: 1.5em auto 1em;
+	margin: 2.5rem auto 1.5rem;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -69,14 +69,14 @@ LEGEND
 	}
 
 	#legend > div:not(last-of-type) {
-		margin-right: 1em;
+		margin-right: 1rem;
 	}
 
 	#legend dt div {
 		width: 25px;
 		height: 25px;
 		border-radius: 50%;
-		margin: 0.5em;
+		margin: 0.5rem;
 	}
 
 	#legend dd {
@@ -90,7 +90,7 @@ TERMS
 #list {
 	position: relative;
 	width: 90%;
-	margin: auto;
+	margin: 0 auto 1rem;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -98,16 +98,6 @@ TERMS
 
 	#list > div {
 		perspective: 600px;
-	}
-
-	.term dt,
-	.term dd {
-		width: 13em;
-		height: 10em;
-		margin: 1em;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
 	}
 
 	dt .romantic,
@@ -131,8 +121,10 @@ TERMS
 
 	.term dt,
 	.term dd {
-		/* width: 100%; */
-		padding: 1em;
+		width: 17rem;
+		height: 15rem;
+		margin: 1.5rem;
+		padding: 1.5rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -146,9 +138,12 @@ TERMS
 
 	.term dt {
 		position: absolute;
-		margin-top: -0.03em;
+		margin-top: -0.03rem;
 		/* height: 3em; */
-		font-family: "Montserrat", "Gotham", "Avenir", "Futura", sans-serif;
+		font-family: "Nunito", "Gotham", "Avenir", "Futura", sans-serif;
+		font-size: 1.1rem;
+		text-transform: uppercase;
+		letter-spacing: 1.7px;
 		/* border-top-left-radius: 5px; */
 		/* border-top-right-radius: 5px; */
 		z-index: 1;
