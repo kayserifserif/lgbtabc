@@ -175,11 +175,29 @@ FOOTER
 
 footer {
 	width: 100%;
-	height: 2em;
+	height: 6em;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
 	background-image: linear-gradient(-120deg, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
 	color: #fff;
+}
+
+footer div {
+	margin: 0;
+	padding: 0.5em;
+}
+
+footer div:first-of-type {
+	padding: 0.5em 0.5em 0.25em 0.5em;
+}
+
+footer div:last-of-type {
+	padding: 0.25em 0.5em 0.5em 0,5em;
+}
+
+footer .social a {
+	display: inline-block;
+	margin: 0.2em;
 }
