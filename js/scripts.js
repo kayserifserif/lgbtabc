@@ -32,3 +32,25 @@
 //       });
 //
 // });
+
+window.onload = function() {
+  var categories = document.getElementById("legend").getElementsByTagName("input");
+  var terms = document.getElementsByClassName("term");
+  for (var i = 0; i < categories.length; i++) {
+    if (categories[i].type == "checkbox") {
+      categories[i].onclick = function() {
+        var category = this.classList[1];
+        console.log(category);
+        for (var j = 0; j < terms.length; j++) {
+          if (terms[j].classList.contains(category)) {
+            if (this.checked) {
+              terms[j].style.display = "block";
+            } else {
+              terms[j].style.display = "none";
+            }
+          }
+        }
+      };
+    }
+  };
+};

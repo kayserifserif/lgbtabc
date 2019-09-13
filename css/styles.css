@@ -1,10 +1,10 @@
 /****
-RED		#e34d4f
-ORANGE	#ff7e59
-YELLOW	#deb41a
-GREEN	#2bac67
-BLUE	#229ec1
-PURPLE	#674c7b
+RED   #e34d4f
+ORANGE  #ff7e59
+YELLOW  #deb41a
+GREEN #2bac67
+BLUE  #229ec1
+PURPLE  #674c7b
 ****/
 
 /****
@@ -12,23 +12,23 @@ BASICS
 ****/
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html, body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 body {
-	color: #444;
-	font-family: "Domine", "Didot", "Bodoni", serif;
-	line-height: 1.5;
+  color: #444;
+  font-family: "Domine", "Didot", "Bodoni", serif;
+  line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Nunito", "Gotham", "Avenir", "Futura", sans-serif;
+  font-family: "Nunito", "Gotham", "Avenir", "Futura", sans-serif;
 }
 
 /****
@@ -36,168 +36,196 @@ HEADER
 ****/
 
 header {
-	margin: auto;
-	width: 100%;
-	padding: 1rem 1rem 1.5rem 1rem;
-	background-image: linear-gradient(-120deg, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-	color: #fff;
-	text-align: center;
+  margin: auto;
+  width: 100%;
+  padding: 1rem 1rem 1.5rem 1rem;
+  background-image: linear-gradient(-120deg, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  color: #fff;
+  text-align: center;
 }
 
-	#title {
-		font-size: 3em;
-		text-align: center;
-	}
+  #title {
+    font-size: 3em;
+    text-align: center;
+  }
 
-	header a,
-	footer a {
-		color: #fff;
-		text-decoration: none;
-		border-bottom: 1px solid currentColor;
-		transition: color 0.1s, border-bottom 0.1s;
-	}
+  header a,
+  footer a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    transition: color 0.1s, border-bottom 0.1s;
+  }
 
-	header a:hover,
-	footer a:hover {
-		color: #FEF3F4;
-	}
+  header a:hover,
+  footer a:hover {
+    color: #FEF3F4;
+  }
 
 /****
 LEGEND
 ****/
 
 #legend {
-	width: 95%;
-	margin: 2.5rem auto 1.5rem;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+  width: 95%;
+  margin: 2.5rem auto 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
+  
+  #legend div {
+    align-items: center;
+  }
 
-	#legend > div {
-		display: flex;
-		align-items: center;
-	}
+  #legend div:not(last-of-type) {
+    margin-right: 2rem;
+  }
 
-	#legend > div:not(last-of-type) {
-		margin-right: 1rem;
-	}
+  #legend input {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 2px solid;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+  }
 
-	#legend dt div {
-		width: 25px;
-		height: 25px;
-		border-radius: 50%;
-		margin: 0.5rem;
-	}
+  #legend input::before {
+    content: "";
+    display: inline-block;
+    margin: 0.2em 0 0 0.2em;
+    border-radius: 50%;
+    transition: width 0.1s ease, height 0.1s ease;
+  }
 
-	#legend dd {
-		margin: 0;
-	}
+  #legend input:not(:checked)::before {
+    background-color: 0;
+    width: 0;
+    height: 0;
+  }
+
+  #legend input:checked::before {
+    width: 1.2em;
+    height: 1.2em;
+  }
+
+  #legend input:hover,
+  #legend label:hover {
+    cursor: pointer;
+  }
 
 /****
 TERMS
 ****/
 
 #list {
-	position: relative;
-	width: 90%;
-	margin: 0 auto 2rem;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+  position: relative;
+  width: 90%;
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-	#list > div {
-		perspective: 600px;
-	}
+  #list > div {
+    perspective: 600px;
+  }
 
-	dt .romantic,
-	.romantic dt,
-	.romantic dd { background-color: #e34d4f; }
-	dt .gender,
-	.gender dt,
-	.gender dd { background-color: #ff7e59; }
-	dt .community,
-	.community dt,
-	.community dd { background-color: #deb41a }
-	dt .biology,
-	.biology dt,
-	.biology dd { background-color: #2bac67; }
-	dt .expression,
-	.expression dt,
-	.expression dd { background-color: #229ec1; }
-	dt .sexual,
-	.sexual dt,
-	.sexual dd { background-color: #674c7b; }
+  /* dt .romantic, */
+  #cat-romantic:checked::before,
+  .romantic dt,
+  .romantic dd { background-color: #e34d4f; }
+  #cat-romantic { color: #e34d4f; }
+  #cat-gender:checked::before,
+  .gender dt,
+  .gender dd { background-color: #ff7e59; }
+  #cat-gender { color: #ff7e59; }
+  #cat-community:checked::before,
+  .community dt,
+  .community dd { background-color: #deb41a }
+  #cat-community { color: #deb41a; }
+  #cat-biology:checked::before,
+  .biology dt,
+  .biology dd { background-color: #2bac67; }
+  #cat-biology { color: #2bac67; }
+  #cat-expression:checked::before,
+  .expression dt,
+  .expression dd { background-color: #229ec1; }
+  #cat-expression { color: #229ec1; }
+  #cat-sexual:checked::before,
+  .sexual dt,
+  .sexual dd { background-color: #674c7b; }
+  #cat-sexual { color: #674c7b; }
 
-	.term dt,
-	.term dd {
-		width: 17rem;
-		height: 15rem;
-		margin: 1.5rem;
-		padding: 1.5rem;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		text-align: center;
-		color: #fff;
-		border-radius: 5px;
-		transition: transform 1s;
-		transform-style: preserve-3d;
-		backface-visibility: hidden;
-	}
+  .term dt,
+  .term dd {
+    width: 17rem;
+    height: 15rem;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
 
-	.term dt {
-		position: absolute;
-		margin-top: -0.03rem;
-		font-family: "Nunito", "Gotham", "Avenir", "Futura", sans-serif;
-		font-size: 1.1rem;
-		text-transform: uppercase;
-		letter-spacing: 1.7px;
-		z-index: 1;
-	}
+  .term dt {
+    position: absolute;
+    margin-top: -0.03rem;
+    font-family: "Nunito", "Gotham", "Avenir", "Futura", sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.7px;
+    z-index: 1;
+  }
 
-	.term dd {
-		transform: rotateY(-180deg);
-	}
+  .term dd {
+    transform: rotateY(-180deg);
+  }
 
-	.term:hover dt {
-		transform: rotateY(180deg);
-	}
+  .term:hover dt {
+    transform: rotateY(180deg);
+  }
 
-	.term:hover dd {
-		transform: rotateY(0);
-	}
+  .term:hover dd {
+    transform: rotateY(0);
+  }
 
 /****
 FOOTER
 ****/
 
 footer {
-	width: 100%;
-	height: 6em;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	text-align: center;
-	background-image: linear-gradient(-120deg, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-	color: #fff;
+  width: 100%;
+  height: 6em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-image: linear-gradient(-120deg, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  color: #fff;
 }
 
 footer div {
-	margin: 0;
-	padding: 0.5em;
+  margin: 0;
+  padding: 0.5em;
 }
 
 footer div:first-of-type {
-	padding: 0.5em 0.5em 0.25em 0.5em;
+  padding: 0.5em 0.5em 0.25em 0.5em;
 }
 
 footer div:last-of-type {
-	padding: 0.25em 0.5em 0.5em 0,5em;
+  padding: 0.25em 0.5em 0.5em 0,5em;
 }
 
 footer .social a {
-	display: inline-block;
-	margin: 0.2em;
+  display: inline-block;
+  margin: 0.2em;
 }
