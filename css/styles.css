@@ -128,7 +128,7 @@ TERMS
   justify-content: center;
 }
 
-  #list > div {
+  .card {
     perspective: 600px;
   }
 
