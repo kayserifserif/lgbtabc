@@ -11,7 +11,9 @@ PURPLE  #674c7b
 BASICS
 ****/
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -85,22 +87,20 @@ LEGEND
   #legend input {
     appearance: none;
     -webkit-appearance: none;
-    border: 2px solid;
+    border: 2px solid currentColor;
     width: 2em;
     height: 2em;
     border-radius: 50%;
+    display: inline-flex;
   }
 
   #legend input::before {
     content: "";
     display: inline-block;
-    margin: 0.2em 0 0 0.2em;
+    margin: auto;
     border-radius: 50%;
     transition: width 0.1s ease, height 0.1s ease;
-  }
-
-  #legend input:not(:checked)::before {
-    background-color: 0;
+    background-color: none;
     width: 0;
     height: 0;
   }
@@ -136,27 +136,43 @@ TERMS
   #cat-romantic:checked::before,
   .romantic dt,
   .romantic dd { background-color: #e34d4f; }
-  #cat-romantic { color: #e34d4f; }
+  #cat-romantic,
+  label[for="cat-romantic"] { color: #e34d4f; }
   #cat-gender:checked::before,
   .gender dt,
   .gender dd { background-color: #ff7e59; }
-  #cat-gender { color: #ff7e59; }
+  #cat-gender,
+  label[for="cat-gender"] { color: #ff7e59; }
   #cat-community:checked::before,
   .community dt,
   .community dd { background-color: #deb41a }
-  #cat-community { color: #deb41a; }
+  #cat-community,
+  label[for="cat-community"] { color: #deb41a; }
   #cat-biology:checked::before,
   .biology dt,
   .biology dd { background-color: #2bac67; }
-  #cat-biology { color: #2bac67; }
+  #cat-biology,
+  label[for="cat-biology"] { color: #2bac67; }
   #cat-expression:checked::before,
   .expression dt,
   .expression dd { background-color: #229ec1; }
-  #cat-expression { color: #229ec1; }
+  #cat-expression,
+  label[for="cat-expression"] { color: #229ec1; }
   #cat-sexual:checked::before,
   .sexual dt,
   .sexual dd { background-color: #674c7b; }
-  #cat-sexual { color: #674c7b; }
+  #cat-sexual,
+  label[for="cat-sexual"] { color: #674c7b; }
+
+  .term {
+    opacity: 1;
+    transition: 1s opacity;
+  }
+
+  .term.hidden {
+    opacity: 0;
+    transition: 1s opacity;
+  }
 
   .term dt,
   .term dd {

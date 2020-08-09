@@ -33,24 +33,19 @@
 //
 // });
 
-window.onload = function() {
-  var categories = document.getElementById("legend").getElementsByTagName("input");
-  var terms = document.getElementsByClassName("term");
-  for (var i = 0; i < categories.length; i++) {
-    if (categories[i].type == "checkbox") {
-      categories[i].onclick = function() {
-        var category = this.classList[1];
-        console.log(category);
-        for (var j = 0; j < terms.length; j++) {
-          if (terms[j].classList.contains(category)) {
-            if (this.checked) {
-              terms[j].style.display = "block";
-            } else {
-              terms[j].style.display = "none";
-            }
-          }
+let checkboxes = document.getElementsByClassName("category");
+var terms = document.getElementsByClassName("term");
+for (let checkbox of checkboxes) {
+  checkbox.addEventListener("click", (e) => {
+    let category = e.target.classList[1];
+    for (let term of terms) {
+      if (term.classList.contains(category)) {
+        if (e.target.checked) {
+          term.classList.remove("hidden");
+        } else {
+          term.classList.add("hidden");
         }
-      };
+      }
     }
-  };
+  });
 };
